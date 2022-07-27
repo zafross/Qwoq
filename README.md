@@ -17,3 +17,23 @@
 3. In the field on the right, enter the number of posts you want to send (For example: `15`)
 4. Enter the channel ID in the last field. (Example: `@reddit_minecraft`)
 5. Press the green start button.
+
+
+## Code
+Some txt here...
+
+## To Do
+_😋 I will be glad for your help_
+- [ ] Redesign web for more settings
+  - [ ] Choose "hot", "new" or "top" in web (reddit marks)
+  - [ ] Choose what type to parse in web (img, video or just text)
+  - [ ] Toggle copyright in web
+  - [ ] Bot token in web
+- [ ] The number on the progress bar (Example: 53/250)
+- [ ] Parse a video too
+- [ ] Do not send similar messages 
+- [ ] A working cancel button (Not functioning now)
+- [ ] Info buttons (Not functioning now)
+- [X] Save settings (config.ini)
+- [ ] Send completed message and turn buttons when progress is done.
+- [X] Translate into English
