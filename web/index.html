@@ -10,14 +10,13 @@
 </head>
 <body>
 	<div class="First_screen">
-		<input type="text" id='reddit' placeholder="r/ сообщества">
+		<input type="text" id='reddit' placeholder="Reddit community ID">
 		
-		<p id="Kol-vo">Количество:</p>
+		<p id="Kol-vo">Amount:</p>
 		<div id="Kol-vo-box"></div>
 		<input type="text" id='amount' placeholder="0">
-		<input type="text" id='channel_id' placeholder="ID канала">
-		<!-- <input type="submit" id="submit" value="Начать"> -->
-		<button id="submit">Начать</button>
+		<input type="text" id='channel_id' placeholder="Telegram channel ID">
+		<button id="submit">Start</button>
 
 		<img id="reddit_info" src="info.png" alt="info">
 		<img id="id_info" src="info.png" alt="info">
@@ -25,12 +24,12 @@
 
 	<div class="Second_screen">
 		<script>document.querySelector(".Second_screen").style.display='none';</script>
-		<h1 id="txt1">Процесс запущен.</h1>
-		<h2 id="txt2">Это займёт некоторое время.</h2>
+		<h1 id="txt1">Process started.</h1>
+		<h2 id="txt2">It will take some time.</h2>
 		
 		<div id="background_load"></div>
 		<div id="load"></div>
-		<button id="cancel">Отменить</button>
+		<button id="cancel">Cancel</button>
 	</div>
 
 	<script type="text/javascript" src="/script.js"></script>

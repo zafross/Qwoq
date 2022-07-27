@@ -233,7 +233,7 @@ body {
 	line-height: 112%;
 	/* or 27px */
 
-	letter-spacing: 0.02em;
+	letter-spacing: 0.08em;
 
 	color: #FFFFFF;
 }
@@ -252,7 +252,7 @@ body {
 	line-height: 112%;
 	/* or 18px */
 
-	letter-spacing: 0.02em;
+	letter-spacing: 0.13em;
 
 	color: rgba(255, 255, 255, 0.7);
 }

@@ -37,10 +37,17 @@ def cancel():  #   <- TO DO
 @eel.expose
 def get_data(r_id, channel_id, amount):
 	if r_id != '' and channel_id != '' and amount != '':
+		
+		try:
+			r_id = r_id.replace('r/', '') # delete r/ if it exiting
+		except:
+			pass 
+
 		try:
 			config.get('web', 'reddit')
 		except:
-			config.add_section('web')
+			config.add_section('web') # check exiting section "web"
+
 		with open('config.ini', 'w') as f:
 			config.set('web', 'reddit', r_id)
 			config.set('web', 'channel', channel_id)
