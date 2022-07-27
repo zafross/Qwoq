@@ -6,22 +6,27 @@
 </div>
 
   
-## ❓ How to use it:
-#### ⚙️ FIRST SETUP
-1. Clone or download repository.
-2. Open cmd(terminal) in the repository folder on your PC and write:
-`pip install -r requirements.txt`
-3. Create a telegram bot with [@BotFather](https://t.me/BotFather) and copy bot token.
-4. Add the created bot to your channel as admin. [(help)](https://stackoverflow.com/a/33497769/19632709)
-5. Run `run.py` and paste the previously copied bot token into the console.
-6. Done!
 
-#### 💥 START
-1. Run `run.py`
-2. In the first field, enter the name of the reddit community (For example: `Minecraft`)
-3. In the field on the right, enter the number of posts you want to send (For example: `15`)
-4. Enter the channel ID in the last field. (Example: `@reddit_minecraft`)
-5. Press `START` button.
+## ⚙️ FIRST SETUP:
+
+#### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
+1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/alpha)
+2. Open cmd in the repository folder on your PC and write: `pip install -r requirements.txt`
+3. Done!
+
+#### 2️⃣ Method 2 - WITHOUT INSTALLED PYTHON:
+1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/alpha)
+2. Run and install `Qwoq setup.exe`
+3. Done!
+
+## ❓ How to use it:
+1. Create a telegram bot with [@BotFather](https://t.me/BotFather) and copy bot token.
+2. Add the created bot to your channel as admin. [(help)](https://stackoverflow.com/a/33497769/19632709)
+3. Run `run.py` or `Qwoq.exe` (Depending on which method you choose) and paste the previously copied bot token into the console.
+4. In the first field, enter the name of the reddit community (For example: `Minecraft`)
+5. In the field on the right, enter the number of posts you want to send (For example: `15`)
+6. Enter the channel ID in the last field. (Example: `@reddit_minecraft`)
+7. Press `START` button.
 
 
 ## ⚡ Code
