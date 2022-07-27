@@ -5,7 +5,7 @@
   <img src="https://img.shields.io/github/downloads/zafross/qwoq/total" alt=""></img>
   <img src="https://img.shields.io/github/license/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
-  <img src="https://img.shields.io/github/v/release/zafross/qwoq?include_prereleases1" alt=""></img>
+  <img src="https://img.shields.io/github/v/release/zafross/qwoq?include_prereleases" alt=""></img>
 </div>
 
 ## ⚙️ FIRST SETUP:
