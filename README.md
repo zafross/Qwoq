@@ -1,8 +1,10 @@
 <h1 align=center>👽 Qwoq - Auto reddit to telegram parser.</h1>
 <p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
+![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white) ->
+![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
 
-## How to use it:
-#### FIRST SETUP
+## ❓ How to use it:
+#### ⚙️ FIRST SETUP
 1. Clone or download repository.
 2. Open cmd(terminal) in the repository folder on your PC and write:
 `pip install -r requirements.txt`
@@ -11,18 +13,22 @@
 5. Run `run.py` and paste the previously copied bot token into the console.
 6. Done!
 
-#### START
+#### 💥 START
 1. Run `run.py`
 2. In the first field, enter the name of the reddit community (For example: `Minecraft`)
 3. In the field on the right, enter the number of posts you want to send (For example: `15`)
 4. Enter the channel ID in the last field. (Example: `@reddit_minecraft`)
-5. Press the green start button.
+5. Press `START` button.
 
 
-## Code
-Some txt here...
+## ⚡ Code
+  The program is written using the eel library which links html, css, js with python. Web design was immediately done in Figma. 
+In the next updates, I want to rework it a lot because in the current version the window is too small,
+ugly and there are very few settings + the bot token is entered through the console (this is terrible).
+  
+  In fact, I am making a program only to train my skills, and it was in this program that I decided to try eel. I will be glad if you help with the development of this repository. 💜
 
-## To Do
+## 💡 To Do
 _😋 I will be glad for your help_
 - [ ] Redesign web for more settings
   - [ ] Choose "hot", "new" or "top" in web (reddit marks)
