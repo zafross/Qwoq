@@ -2,7 +2,7 @@
 <p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
 
 <div align=center>
-<img align=center src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white" alt="reddit"> <h2>-></h2> <img align=center src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="reddit">
+<img align=center src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white" alt="reddit"> <p font-size=16px>-></p> <img align=center src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="reddit">
 </div>
   
 ## ❓ How to use it:
