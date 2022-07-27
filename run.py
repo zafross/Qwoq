@@ -8,11 +8,18 @@ from win32api import GetSystemMetrics # in order to get screen size
 from configparser import ConfigParser  # CONFIG
 config = ConfigParser()
 config.read('config.ini')
-bot = telebot.TeleBot(config.get('main', 'token'), parse_mode='Markdown') # Do not install MarkdownV2 because there are a lot of errors
 
-# config.set('main', 'name_perm', 'value')
-# with open('config.ini', 'w') as f:           # In order not to forget
-#     config.write(f)
+try: # Checking for the existence of a file
+	with open('config.ini', 'r') as f:
+		print('file is found')
+except FileNotFoundError:
+	with open('config.ini', 'w') as f:
+		tkn = str(input('Input telegram bot token: '))  # NEED TO TRANSFER THIS TO WEB
+		config.add_section('bot')
+		config.set('bot', 'token', tkn)
+		config.write(f)
+
+bot = telebot.TeleBot(config.get('bot', 'token'), parse_mode='Markdown') # Do not install MarkdownV2 because there are a lot of errors
 
 @eel.expose
 def cancel():  #   <- TO DO
