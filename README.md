@@ -1,6 +1,7 @@
 <h1 align=center>👽 Qwoq - Auto reddit to telegram parser.</h1>
 <p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
-![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white) ->
+
+![Reddit](https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white)
 ![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
 
 ## ❓ How to use it:
