@@ -1,21 +1,22 @@
 <h1 align=center>👽 Qwoq - Auto reddit to telegram parser.</h1>
 <p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
-
-<div align=center>
-<img align=center src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white" alt="reddit"><img align=center src="https://i.imgur.com/fecF4mQ.png" alt="To"><img align=center src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white" alt="reddit">
-</div>
-
   
+<div align=center>
+  <img src="https://img.shields.io/github/downloads/zafross/qwoq/total" alt=""></img>
+  <img src="https://img.shields.io/github/license/zafross/qwoq" alt=""></img>
+  <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
+  <img src="https://img.shields.io/github/v/release/zafross/qwoq?include_prereleases" alt=""></img>
+</div>
 
 ## ⚙️ FIRST SETUP:
 
 #### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
-1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/alpha)
+1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/v0.1-alpha)
 2. Open cmd in the repository folder on your PC and write: `pip install -r requirements.txt`
 3. Done!
 
 #### 2️⃣ Method 2 - WITHOUT INSTALLED PYTHON:
-1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/alpha)
+1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/v0.1-alpha)
 2. Run and install `Qwoq setup.exe`
 3. Done!
 
