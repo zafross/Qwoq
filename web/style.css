@@ -1,0 +1,258 @@
+body {
+	background: #121212;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+#reddit {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 10px;
+	top: 13px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+}
+
+#channel_id {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 10px;
+	top: 72px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+
+}
+
+#Kol-vo {
+	position: absolute;
+	width: 165px;
+	height: 45px;
+	left: 280px;
+	top: -4px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: rgba(255, 255, 255, 0.8);
+}
+
+#Kol-vo-box {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 164px;
+	height: 45px;
+	left: 250px;
+	top: 13px;
+
+	background: rgba(136, 136, 136, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px 0px 0px 12px;
+}
+
+#amount {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 62px;
+	height: 45px;
+	left: 414px;
+	top: 13px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border-width: 1px 1px 1px 0px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0px 12px 12px 0px;
+	font-family: 'Rubik';
+
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+
+}
+
+#submit {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 250px;
+	top: 72px;
+
+	background: rgba(47, 245, 67, 0.51);
+	border: 1px solid rgba(255, 255, 255, 0.38);
+	border-radius: 12px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	color: #FFFFFF;
+}
+
+#submit:hover {
+  background-color: rgba(42, 245, 67, 0.53);
+}
+
+#reddit_info {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 213px;
+	top: 17px;
+}
+
+#id_info {
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 213px;
+	top: 76px;
+}
+
+
+#cancel {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 244px;
+	top: 74px;
+
+	background: rgba(255, 0, 0, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.26);
+	border-radius: 12px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	color: #FFFFFF;
+}
+
+
+#background_load {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 244px;
+	top: 13px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 12px;
+}
+
+#load {
+	box-sizing: border-box;
+
+	position: absolute;
+	/*width: 226px;*/
+	width: 20px;
+	height: 45px;
+	left: 244px;
+	top: 13px;
+
+	background: rgba(64, 228, 37, 0.60);
+	border: 1px solid rgba(255, 255, 255, 0.32);
+	border-radius: 12px;
+}
+
+#txt1 {
+	position: absolute;
+	width: 211px;
+	height: 54px;
+	left: 21px;
+	top: 0px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 112%;
+	/* or 27px */
+
+	letter-spacing: 0.02em;
+
+	color: #FFFFFF;
+}
+
+#txt2 {
+	position: absolute;
+	width: 201px;
+	height: 38px;
+	left: 21px;
+	top: 60px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 112%;
+	/* or 18px */
+
+	letter-spacing: 0.02em;
+
+	color: rgba(255, 255, 255, 0.7);
+}

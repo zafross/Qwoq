@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="/eel.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Qwoq - Reddit to Tg parser</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="icon" href="/favicon.png">
+</head>
+<body>
+	<div class="First_screen">
+		<input type="text" id='reddit' placeholder="r/ сообщества">
+		
+		<p id="Kol-vo">Количество:</p>
+		<div id="Kol-vo-box"></div>
+		<input type="text" id='amount' placeholder="0">
+		<input type="text" id='channel_id' placeholder="ID канала">
+		<!-- <input type="submit" id="submit" value="Начать"> -->
+		<button id="submit">Начать</button>
+
+		<img id="reddit_info" src="info.png" alt="info">
+		<img id="id_info" src="info.png" alt="info">
+	</div>
+
+	<div class="Second_screen">
+		<script>document.querySelector(".Second_screen").style.display='none';</script>
+		<h1 id="txt1">Процесс запущен.</h1>
+		<h2 id="txt2">Это займёт некоторое время.</h2>
+		
+		<div id="background_load"></div>
+		<div id="load"></div>
+		<button id="cancel">Отменить</button>
+	</div>
+
+	<script type="text/javascript" src="/script.js"></script>
+</body>
+</html>
