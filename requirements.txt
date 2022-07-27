@@ -1,0 +1,4 @@
+Eel==0.14.0
+pyTelegramBotAPI==4.6.0
+pywin32==303
+requests==2.27.1
