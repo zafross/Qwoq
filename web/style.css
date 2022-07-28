@@ -5,17 +5,18 @@ body {
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 #reddit {
+	padding-left: 10px;
 	box-sizing: border-box;
 
 	position: absolute;
 	width: 226px;
 	height: 45px;
-	left: 10px;
-	top: 13px;
+	left: 35px;
+	top: 310px;
 
 	background: rgba(136, 136, 136, 0.05);
 	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 12px;
+	border-radius: 7px;
 
 	font-family: 'Rubik';
 	font-style: normal;
@@ -24,23 +25,23 @@ body {
 	line-height: 21px;
 	display: flex;
 	align-items: center;
-	text-align: center;
 
 	color: #FFFFFF;
 }
 
 #channel_id {
+	padding-left: 10px;
 	box-sizing: border-box;
 
 	position: absolute;
 	width: 226px;
 	height: 45px;
-	left: 10px;
-	top: 72px;
+	left: 35px;
+	top: 227px;
 
 	background: rgba(136, 136, 136, 0.05);
 	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 12px;
+	border-radius: 7px;
 
 	font-family: 'Rubik';
 	font-style: normal;
@@ -49,85 +50,48 @@ body {
 	line-height: 21px;
 	display: flex;
 	align-items: center;
-	text-align: center;
 
 	color: #FFFFFF;
 
-}
-
-#Kol-vo {
-	position: absolute;
-	width: 165px;
-	height: 45px;
-	left: 280px;
-	top: -4px;
-
-	font-family: 'Rubik';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 21px;
-	display: flex;
-	align-items: center;
-	text-align: center;
-
-	color: rgba(255, 255, 255, 0.8);
-}
-
-#Kol-vo-box {
-	box-sizing: border-box;
-
-	position: absolute;
-	width: 164px;
-	height: 45px;
-	left: 250px;
-	top: 13px;
-
-	background: rgba(136, 136, 136, 0.1);
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 12px 0px 0px 12px;
 }
 
 #amount {
+	padding-left: 10px;
 	box-sizing: border-box;
 
 	position: absolute;
-	width: 62px;
+	width: 156px;
 	height: 45px;
-	left: 414px;
-	top: 13px;
+	left: 549px;
+	top: 393px;
 
-	background: rgba(136, 136, 136, 0.05);
-	border-width: 1px 1px 1px 0px;
-	border-style: solid;
-	border-color: rgba(255, 255, 255, 0.2);
-	border-radius: 0px 12px 12px 0px;
 	font-family: 'Rubik';
-
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;
 	line-height: 21px;
 	display: flex;
 	align-items: center;
-	text-align: center;
 
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px 0px 0px 7px;
 	color: #FFFFFF;
-
 }
 
 #submit {
 	box-sizing: border-box;
 
 	position: absolute;
-	width: 226px;
+	width: 228px;
 	height: 45px;
-	left: 250px;
-	top: 72px;
+	left: 549px;
+	top: 471px;
 
 	background: rgba(47, 245, 67, 0.51);
 	border: 1px solid rgba(255, 255, 255, 0.38);
-	border-radius: 12px;
+	box-shadow: 0px 0px 20px rgba(51, 255, 0, 0.15);
+	border-radius: 7px;
 
 	font-family: 'Rubik';
 	font-style: normal;
@@ -144,22 +108,6 @@ body {
 
 #submit:hover {
   background-color: rgba(42, 245, 67, 0.53);
-}
-
-#reddit_info {
-	position: absolute;
-	width: 19px;
-	height: 19px;
-	left: 213px;
-	top: 17px;
-}
-
-#id_info {
-	position: absolute;
-	width: 19px;
-	height: 19px;
-	left: 213px;
-	top: 76px;
 }
 
 
@@ -255,4 +203,333 @@ body {
 	letter-spacing: 0.13em;
 
 	color: rgba(255, 255, 255, 0.7);
+}
+
+#Title {
+	position: absolute;
+	width: 136px;
+	height: 57px;
+	left: 35px;
+	top: 1px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 48px;
+	line-height: 57px;
+	/* identical to box height */
+
+	letter-spacing: 0.04em;
+
+	color: #FFFFFF;
+}
+
+#Subtitle {
+	position: absolute;
+	width: 314px;
+	height: 77px;
+	left: 35px;
+	top: 58px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 144%;
+	/* or 35px */
+
+	letter-spacing: 0.04em;
+
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.info {
+	position: absolute;
+	
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	/* identical to box height */
+
+	display: flex;
+	align-items: flex-end;
+
+	color: #FFFFFF;
+}
+
+#channel_id_help {
+	width: 194px;
+	height: 24px;
+	left: 35px;
+	top: 181px;
+}
+
+#reddit_help {
+	width: 154px;
+	height: 24px;
+	left: 35px;
+	top: 264px;
+}
+
+#token_help {
+	width: 95px;
+	height: 24px;
+	left: 35px;
+	top: 347px;
+}
+
+#image_help {
+	width: 154px;
+	height: 24px;
+	left: 292px;
+	top: 263px;
+}
+
+#copyright_help {
+	width: 147px;
+	height: 24px;
+	left: 292px;
+	top: 347px;
+}
+
+#cooldown_help {
+	width: 147px;
+	height: 24px;
+	left: 549px;
+	top: 264px;
+}
+
+#amount_help {
+	width: 125px;
+	height: 24px;
+	left: 549px;
+	top: 347px;
+}
+
+#version {
+	position: absolute;
+	width: 262px;
+	height: 42px;
+	left: 38px;
+	top: 460px; 
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 19px;
+	display: flex;
+	align-items: flex-end;
+
+	color: rgba(255, 255, 255, 0.2);
+}
+
+#logo {
+	position: absolute;
+	width: 137px;
+	height: 137px;
+	left: 640px;
+	top: 33px;
+	color: #FFFFFF;
+}
+
+#amount_plus {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 70px;
+	height: 23px;
+	left: 705px;
+	top: 393px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border-width: 1px 1px 1px 0px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0px 7px 0px 0px;
+}
+
+#amount_minus {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 70px;
+	height: 22px;
+	left: 705px;
+	top: 416px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0px 0px 7px 0px;
+}
+
+#amount_plus_png {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 731px;
+	top: 395px;
+}
+
+#amount_minus_png {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 731px;
+	top: 419px;
+}
+
+#cooldown {
+	padding-left: 10px;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 156px;
+	height: 45px;
+	left: 549px;
+	top: 310px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px 0px 0px 7px;
+
+	color: #FFFFFF;
+}
+
+#cooldown_plus {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 70px;
+	height: 23px;
+	left: 705px;
+	top: 310px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border-width: 1px 1px 1px 0px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0px 7px 0px 0px;
+}
+
+#cooldown_minus {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 70px;
+	height: 22px;
+	left: 705px;
+	top: 333px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border-width: 0px 1px 1px 0px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.2);
+	border-radius: 0px 0px 7px 0px;
+}
+
+#cooldown_plus_png {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 731px;
+	top: 312px;
+}
+
+#cooldown_minus_png {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 731px;
+	top: 336px;
+}
+
+#token {
+	padding-left: 10px;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 35px;
+	top: 393px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+
+	color: #FFFFFF;
+
+}
+
+#image {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 292px;
+	top: 309px;
+
+	background: rgba(70, 233, 56, 0.18);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	color: rgba(255, 255, 255, 0.86);
+}
+
+#copyright {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 226px;
+	height: 45px;
+	left: 292px;
+	top: 393px;
+
+	background: rgba(70, 233, 56, 0.18);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 21px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	color: rgba(255, 255, 255, 0.86);
 }

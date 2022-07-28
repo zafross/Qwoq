@@ -100,7 +100,7 @@ def get_data(r_id, channel_id, amount):
 
 
 ##########################################
-h = round(GetSystemMetrics(0)/2-243)  # middle of the screen
-w = round(GetSystemMetrics(1)/2-130)  # middle of the screen
+h = round(GetSystemMetrics(0)/2-813/2)  # middle of the screen
+w = round(GetSystemMetrics(1)/2-548/2)  # middle of the screen
 eel.init('web') # init folder
-eel.start('index.html', size=(502, 170), position=(h, w)) # start chrome
+eel.start('index.html', size=(813+15, 548+40), position=(h, w)) # start chrome #+15 +40
