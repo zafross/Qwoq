@@ -35,7 +35,7 @@
 
 
 ## ⚡ Code
-  The program is written using the eel library which links html, css, js with python. Web design was immediately done in Figma. 
+  The program is written using the eel library which links html, css, js with python. Web design was immediately done in [Figma](https://www.figma.com/file/7ZyhO41tvhen7h9H1s7JkC/Untitled). 
 In the next updates, I want to rework it a lot because in the current version the window is too small,
 ugly and there are very few settings + the bot token is entered through the console (this is terrible).
   
