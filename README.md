@@ -44,6 +44,7 @@ _😋 I will be glad for your help_
   - [ ] Choose what type to parse in web (img, video or just text)
   - [ ] Toggle copyright in web
   - [ ] Bot token in web
+  - [ ] Change the delay between messages in web
 - [ ] The number on the progress bar (Example: 53/250)
 - [ ] Parse a video too
 - [ ] Do not send similar messages 
