@@ -8,6 +8,10 @@
   <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt=""></img>
 </div>
 
+<div align=center>
+  <img src="https://i.imgur.com/3ppnvhD.gif" alt=""></img>
+</div>
+
 ## ⚙️ FIRST SETUP:
 
 #### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
