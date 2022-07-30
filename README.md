@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/github/license/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt=""></img>
-  ![Lines of code](https://img.shields.io/tokei/lines/github/zafross/qwoq)
+  <img src="https://img.shields.io/tokei/lines/github/zafross/qwoq" alt="">
 </div>
 
 <div align=center>
