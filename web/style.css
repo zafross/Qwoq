@@ -1,5 +1,5 @@
 body {
-	background: #121212;
+	background: #121212;           /*Project created with love by zafros*/
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
@@ -80,6 +80,7 @@ body {
 }
 
 #submit {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -108,6 +109,12 @@ body {
 
 #submit:hover {
   background-color: rgba(42, 245, 67, 0.54);
+  cursor: pointer;
+}
+
+#version:hover {
+	cursor: pointer;
+	color: #054BF9FF;
 }
 
 #Title {
@@ -127,6 +134,45 @@ body {
 	letter-spacing: 0.04em;
 
 	color: #FFFFFF;
+}
+
+#token::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+#reddit::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+#channel_id::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+#cooldown::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+#amount::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+#Title::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+#Subtitle::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
+}
+
+.info::selection {
+ color: #fff; /* Цвет текста */
+ background: #911BE3E9; /* Цвет фона */
 }
 
 #Subtitle {
@@ -214,11 +260,12 @@ body {
 }
 
 #version {
+	user-select: none;
 	position: absolute;
-	width: 262px;
-	height: 42px;
+	width: 170px;                       /*ENLARGE ME IF YOU CHANGE THE VERSION!*/
+	height: 22px;
 	left: 38px;
-	top: 460px; 
+	top: 480px; 
 
 	font-family: 'Rubik';
 	font-style: normal;
@@ -232,6 +279,7 @@ body {
 }
 
 #logo {
+	user-select: none;
 	position: absolute;
 	width: 137px;
 	height: 137px;
@@ -241,6 +289,7 @@ body {
 }
 
 #amount_plus {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -257,6 +306,7 @@ body {
 }
 
 #amount_minus {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -273,6 +323,7 @@ body {
 }
 
 #amount_plus_png {
+	user-select: none;
 	color: #fff;
 	position: absolute;
 	width: 18px;
@@ -282,6 +333,7 @@ body {
 }
 
 #amount_minus_png {
+	user-select: none;
 	color: #fff;
 	position: absolute;
 	width: 18px;
@@ -316,6 +368,7 @@ body {
 }
 
 #cooldown_plus {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -332,6 +385,7 @@ body {
 }
 
 #cooldown_minus {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -354,6 +408,7 @@ body {
 	height: 18px;
 	left: 731px;
 	top: 312px;
+	user-select: none;
 }
 
 #cooldown_minus_png {
@@ -363,6 +418,33 @@ body {
 	height: 18px;
 	left: 731px;
 	top: 336px;
+	user-select: none;
+}
+
+#cooldown_minus_png:hover {
+	cursor: pointer;
+}
+#cooldown_plus_png:hover {
+	cursor: pointer;
+}
+#cooldown_minus:hover {
+	cursor: pointer;
+}
+#cooldown_plus:hover {
+	cursor: pointer;
+}
+
+#amount_minus_png:hover {
+	cursor: pointer;
+}                                                  /*Project created with love by zafros*/
+#amount_plus_png:hover {
+	cursor: pointer;
+}
+#amount_minus:hover {
+	cursor: pointer;
+}
+#amount_plus:hover {
+	cursor: pointer;
 }
 
 #token {
@@ -392,6 +474,7 @@ body {
 }
 
 #image {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -417,7 +500,16 @@ body {
 	color: rgba(255, 255, 255, 0.86);
 }
 
+#image:hover {
+	cursor: pointer;
+}
+
+#copyright:hover {
+	cursor: pointer;
+}
+
 #copyright {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -441,4 +533,261 @@ body {
 	justify-content: center;
 
 	color: rgba(255, 255, 255, 0.86);
+}
+
+#title_process {
+	position: absolute;
+	width: 380px;
+	height: 28px;
+	left: 35px;
+	top: 215px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	display: flex;
+	align-items: flex-end;
+
+	color: #FFFFFF;
+}
+
+#counter {
+	position: absolute;
+	width: 345px;
+	height: 24px;
+	left: 432px;
+	top: 200px;
+	float: right;
+	right: 0;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	/* identical to box height */
+
+	display: flex;
+	align-items: flex-end;
+	text-align: right;
+	letter-spacing: 0.06em;
+	display: inline-block;
+
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#loading_background {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 742px;
+	height: 45px;
+	left: 35px;
+	top: 258px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+	user-select: none;
+}
+
+#loading {
+	transition: 0.2s ease-in-out;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 10px;
+	height: 45px;
+	left: 35px;
+	top: 258px;
+
+	background: rgba(132, 36, 255, 0.51);
+	border: 1px solid #8B8B8B;
+	box-shadow: 0px 0px 20px rgba(158, 0, 255, 0.1);
+	border-radius: 7px;
+	user-select: none;
+}
+
+#background_card_me {
+	user-select: none;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 361px;
+	height: 128px;
+	left: 35px;
+	top: 325px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+}
+
+#background_card_me:hover {
+	cursor: pointer;
+	background: rgba(136, 136, 136, 0.1);
+}
+#background_card_star:hover {
+	cursor: pointer;
+	background: rgba(136, 136, 136, 0.1);
+}
+#back:hover {
+	cursor: pointer;
+	background: rgba(255, 0, 0, 0.61);
+}
+#logo:hover {
+	cursor: pointer;
+}
+
+#background_card_star {
+	user-select: none;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 361px;
+	height: 128px;
+	left: 416px;
+	top: 325px;
+
+	background: rgba(136, 136, 136, 0.05);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+}
+
+#my_avatar {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	left: 18px;
+	top: 14px;
+	border-radius: 7px;
+	color: #fff;
+}
+
+#me_title {
+	position: absolute;
+	width: 215px;
+	height: 40px;
+	left: 133px;
+	top: 15px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	display: flex;
+	align-items: center;
+
+	color: #FFFFFF;
+}
+
+#me_subtitle {
+	position: absolute;
+	width: 222px;
+	height: 53px;
+	left: 133px;
+	top: 53px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#star_img {
+	position: absolute;
+	left: 17px;
+	top: 18px;
+	border-radius: 4px;                         /*Project created with love by zafros*/
+}
+
+#star_title {
+	position: absolute;
+	width: 230px;
+	height: 40px;
+	left: 131px;
+	top: 15px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	display: flex;
+	align-items: center;
+
+	color: #FFFFFF;
+}
+
+#star_subtitle {
+	position: absolute;
+	width: 222px;
+	height: 53px;
+	left: 131px;
+	top: 53px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+
+	color: rgba(255, 255, 255, 0.7);
+}
+
+#back {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 228px;
+	height: 45px;
+	left: 549px;
+	top: 471px;
+
+	background: rgba(255, 0, 0, 0.51);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.6);
+	border-radius: 7px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+
+	color: #FFFFFF;
+}
+
+#done_title {
+	user-select: none;
+	opacity: 0;
+	justify-content: center;
+	position: absolute;
+	width: 742px;
+	height: 20px;
+	left: 35px;
+	top: 271px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: flex-end;
+	text-align: center;
 }

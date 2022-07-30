@@ -1,6 +1,6 @@
 import eel
 import requests
-import telebot
+import telebot                                     # Project created with love by zafros #
 from telebot import types
 from time import sleep
 from win32api import GetSystemMetrics # in order to get screen size
@@ -39,6 +39,7 @@ def cancel():  #   <- TO DO
 @eel.expose
 def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 	print(r_id + ' - ' + channel_id + ' - ' + amount + ' - ' + token + ' - ' + str(image) + ' - ' + str(copyright) + ' - ' + str(cooldown))
+	progress_count = 1
 	if r_id != '' and channel_id != '' and amount != '' and token != '':
 
 		bot = telebot.TeleBot(token, parse_mode='Markdown')
@@ -54,7 +55,7 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 			config.set('web', 'reddit', r_id)
 			config.set('web', 'channel', channel_id)
 			config.set('web', 'token', token)
-			config.set('web', 'amount', amount)
+			config.set('web', 'amount', amount)       # Project created with love by zafros #
 			config.set('web', 'cooldown', cooldown)
 			config.set('web', 'image', str(image))
 			config.set('web', 'copyright', str(copyright))
@@ -93,19 +94,21 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 					bot.send_message(channel_id, txt, disable_web_page_preview = True)
 				sleep(int(cooldown)/1000) # to no spam report from telegram
 
-				pixel = round(226 / (amount/(i-1)))
-				if pixel < 20:
-					pixel = 20                     # progress bar editing
-				eel.set_progres(str(pixel)+'px')
+				pixel = round(742 / (amount/(i-1)))
+				if pixel < 10:
+					pixel = 10                     # progress bar editing
+				progress_count += 1
+				eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
 
 			except Exception as ex:
 				print(ex)
 				sleep(5)
 			print('\n')
+		eel.Done(str(amount))
 	else:
 		print('НЕ ВСЕ ПОЛЯ ЗАПОЛНЕНЫ')
 
-
+                                                          # Project created with love by zafros #
 
 ##########################################
 h = round(GetSystemMetrics(0)/2-813/2)  # middle of the screen

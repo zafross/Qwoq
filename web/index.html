@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">                   <!-- Project created with love by zafros -->
 <head>
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="/eel.js"></script>
@@ -9,10 +9,13 @@
 	<link rel="icon" href="/favicon.png">
 </head>
 <body>
+	<p id="version">version: v0.2-beta</p>
+
+	<img id="logo" src="/favicon.png" alt="Files are broken! Please download the latest version! https://github.com/zafross/Qwoq">
+	<h1 id="Title">Qwoq</h1>
+	<h4 id="Subtitle">Reddit to telegram parser</h4>
 	<div class="First_screen">
 		<!-- <a href="page2.html">other page</a> -->
-		<h1 id="Title">Qwoq</h1>
-		<h4 id="Subtitle">Reddit to telegram parser</h4>
 		<p id="channel_id_help" class="info">Telegram channel ID:</p>
 		<p id="reddit_help" class="info">Subreddit name:</p>
 		<p id="token_help" class="info">Bot token:</p>
@@ -21,9 +24,7 @@
 		<p id="cooldown_help" class="info">Cooldown (milliseconds):</p>
 		<p id="amount_help" class="info">Post amount:</p>
 
-		<p id="version">version: v0.2-beta</p>
-
-		<img id="logo" src="/favicon.png" alt="Files are broken! Please download the latest version! https://github.com/zafross/Qwoq">
+		<!-- Project created with love by zafros -->
 		<input type="text" id='reddit' placeholder="Minecraft">
 		<input type="text" id='channel_id' placeholder="@reddit_telegram">
 		<input type="text" id='token' placeholder="KJSADAB:12312721:ASL">
@@ -46,14 +47,27 @@
 		<button id="submit">Start</button>
 	</div>
 
-<!-- 		<script>document.querySelector(".Second_screen").style.display='none';</script>
-		<h1 id="txt1">Process started.</h1>
-		<h2 id="txt2">It will take some time.</h2>
-		
-		<div id="background_load"></div>
-		<div id="load"></div>
-		<button id="cancel">Cancel</button> -->
+	<div class="Second_screen">
+		<script>document.querySelector(".Second_screen").style.display='none';</script>
+		<span id="title_process">Process started</span>
+		<p id="counter">0/100</p>
+		<div id="loading_background"></div>
+		<div id="loading"></div>
+		<span id="done_title">🎉</span>
 
+		<div id="background_card_me">
+			<img id="my_avatar" src="/my_avatar.png" alt="Files are broken! Please download the latest version! https://github.com/zafross/Qwoq">
+			<span id="me_title">Created by zafros</span>
+			<span id="me_subtitle">Check out my other works.</span>
+		</div>	
+		<div id="background_card_star">
+			<img id="star_img" src="/star.png" alt="Files are broken! Please download the latest version! https://github.com/zafross/Qwoq">
+			<span id="star_title">Please help me</span>
+			<span id="star_subtitle">If you like it, please put a star on this project.</span>
+		</div>
+		<button id="back">Back</button>
+	</div>
+                                               <!-- Project created with love by zafros -->
 	<script type="text/javascript" src="/script.js"></script>
 </body>
 </html>
