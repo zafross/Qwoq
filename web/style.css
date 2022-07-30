@@ -273,6 +273,7 @@ body {
 }
 
 #amount_plus_png {
+	color: #fff;
 	position: absolute;
 	width: 18px;
 	height: 18px;
@@ -281,6 +282,7 @@ body {
 }
 
 #amount_minus_png {
+	color: #fff;
 	position: absolute;
 	width: 18px;
 	height: 18px;
@@ -346,6 +348,7 @@ body {
 }
 
 #cooldown_plus_png {
+	color: #fff;
 	position: absolute;
 	width: 18px;
 	height: 18px;
@@ -354,6 +357,7 @@ body {
 }
 
 #cooldown_minus_png {
+	color: #fff;
 	position: absolute;
 	width: 18px;
 	height: 18px;

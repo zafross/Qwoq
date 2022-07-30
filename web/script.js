@@ -4,6 +4,33 @@ var btn_copyright = 1
 let btn = document.querySelector("#submit");
 btn.addEventListener("click", sendData);
 
+document.querySelector("#amount_plus_png").addEventListener("click", function() {
+	document.querySelector("#amount").value = parseInt(document.querySelector("#amount").value) + 1
+});
+document.querySelector("#amount_minus_png").addEventListener("click", function() {
+	document.querySelector("#amount").value = parseInt(document.querySelector("#amount").value) - 1
+});
+document.querySelector("#amount_plus").addEventListener("click", function() {
+	document.querySelector("#amount").value = parseInt(document.querySelector("#amount").value) + 1
+});
+document.querySelector("#amount_minus").addEventListener("click", function() {
+	document.querySelector("#amount").value = parseInt(document.querySelector("#amount").value) - 1
+});
+
+
+document.querySelector("#cooldown_plus_png").addEventListener("click", function() {
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 1
+});
+document.querySelector("#cooldown_minus_png").addEventListener("click", function() {
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 1
+});
+document.querySelector("#cooldown_plus").addEventListener("click", function() {
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 1
+});
+document.querySelector("#cooldown_minus").addEventListener("click", function() {
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 1
+});
+
 let btn3 = document.querySelector("#image");
 btn3.addEventListener("click", function() {
 	if (btn_image == 1) {
