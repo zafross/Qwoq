@@ -12,45 +12,52 @@ config.read('config.ini')
 try: # Checking for the existence of a file
 	with open('config.ini', 'r') as f:
 		pass
+	need_section=False
 except FileNotFoundError:
 	with open('config.ini', 'w') as f:
-		tkn = str(input('Input telegram bot token: '))  # NEED TO TRANSFER THIS TO WEB
-		config.add_section('bot')
-		config.set('bot', 'token', tkn)
-		config.write(f)
+		pass
+	need_section=True
 
 @eel.expose
 def on_load_js(): # Start after javascript is loaded
 	try:
 		r_id = config.get('web', 'reddit')
 		channel_id = config.get('web', 'channel')
-		eel.set_params(r_id, channel_id)   # <- Inserts the last entered data
-	except: # if this first start
-		pass
-
-bot = telebot.TeleBot(config.get('bot', 'token'), parse_mode='Markdown') # Do not install MarkdownV2 because there are a lot of errors
+		token = config.get('web', 'token')
+		amount = config.get('web', 'amount')
+		cooldown = config.get('web', 'cooldown')
+		image = config.get('web', 'image')
+		copyright = config.get('web', 'copyright')
+		eel.set_params(r_id, channel_id, token, amount, cooldown, image, copyright)   # <- Inserts the last entered data
+	except Exception as ex: # if this first start
+		print(ex)
 
 @eel.expose
 def cancel():  #   <- TO DO
 	print('canceled')
 
 @eel.expose
-def get_data(r_id, channel_id, amount):
-	if r_id != '' and channel_id != '' and amount != '':
-		
+def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
+	print(r_id + ' - ' + channel_id + ' - ' + amount + ' - ' + token + ' - ' + str(image) + ' - ' + str(copyright) + ' - ' + str(cooldown))
+	if r_id != '' and channel_id != '' and amount != '' and token != '':
+
+		bot = telebot.TeleBot(token, parse_mode='Markdown')
+
 		try:
 			r_id = r_id.replace('r/', '') # delete r/ if it exiting
 		except:
 			pass 
 
-		try:
-			config.get('web', 'reddit')
-		except:
-			config.add_section('web') # check exiting section "web"
-
 		with open('config.ini', 'w') as f:
+			if need_section:
+				config.add_section('web')
 			config.set('web', 'reddit', r_id)
 			config.set('web', 'channel', channel_id)
+			config.set('web', 'token', token)
+			config.set('web', 'amount', amount)
+			config.set('web', 'cooldown', cooldown)
+			config.set('web', 'image', str(image))
+			config.set('web', 'copyright', str(copyright))
 			config.write(f)
 		amount = int(amount) # fix one bug
 
@@ -76,14 +83,15 @@ def get_data(r_id, channel_id, amount):
 				print(ex)
 				img=False
 
-			copyright = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
-			txt = txt + f'[\n © Reddit]({copyright})'
+			if copyright == 1:
+				copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
+				txt = txt + f'[\n © Reddit]({copyright_text})'
 			try:
 				if img:
 					bot.send_photo(channel_id, photo=link, caption=txt)
-				else:
+				elif image == 0:
 					bot.send_message(channel_id, txt, disable_web_page_preview = True)
-				sleep(1) # to no spam report from telegram
+				sleep(int(cooldown)/1000) # to no spam report from telegram
 
 				pixel = round(226 / (amount/(i-1)))
 				if pixel < 20:
