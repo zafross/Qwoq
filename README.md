@@ -16,13 +16,13 @@
 ## ⚙️ FIRST SETUP:
 
 #### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
-1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/v0.1-alpha)
+1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
 2. Open cmd in the repository folder on your PC and write: `pip install -r requirements.txt`
 3. Done!
 
 #### 2️⃣ Method 2 - WITHOUT INSTALLED PYTHON:
-1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/v0.1-alpha)
-2. Run and install `Qwoq setup.exe`
+1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
+2. Run and install `Qwoq 0.2 setup.exe`
 3. Done!
 
 ## ❓ How to use it:
@@ -44,17 +44,17 @@ ugly and there are very few settings + the bot token is entered through the cons
 
 ## 💡 To Do
 _😋 I will be glad for your help_
-- [ ] Redesign web for more settings
+- [X] Redesign web for more settings
   - [ ] Choose "hot", "new" or "top" in web (reddit marks)
-  - [ ] Choose what type to parse in web (img, video or just text)
-  - [ ] Toggle copyright in web
-  - [ ] Bot token in web
-  - [ ] Change the delay between messages in web
+  - [X] +- Choose what type to parse in web (img, video or just text) 
+  - [X] Toggle copyright in web
+  - [X] Bot token in web
+  - [X] Change the delay between messages in web
 - [ ] The number on the progress bar (Example: 53/250)
 - [ ] Parse a video too
 - [ ] Do not send similar messages 
 - [ ] A working cancel button (Not functioning now)
 - [ ] Info buttons (Not functioning now)
 - [X] Save settings (config.ini)
-- [ ] Send completed message and turn buttons when progress is done.
+- [X] Send completed message and turn buttons when progress is done.
 - [X] Translate into English
