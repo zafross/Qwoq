@@ -38,9 +38,7 @@
 
 
 ## ⚡ Code
-  The program is written using the eel library which links html, css, js with python. Web design was immediately done in [Figma](https://www.figma.com/file/7ZyhO41tvhen7h9H1s7JkC/Untitled). 
-In the next updates, I want to rework it a lot because in the current version the window is too small,
-ugly and there are very few settings + the bot token is entered through the console (this is terrible).
+  The program is written using the eel library which links html, css, js with python. Web design was immediately done in [Figma](https://www.figma.com/file/7ZyhO41tvhen7h9H1s7JkC/Untitled). I've recently changed the design and added more settings, but there's a lot more I want to do.
   
   In fact, I am making a program only to train my skills, and it was in this program that I decided to try eel. I will be glad if you help with the development of this repository. 💜
 
