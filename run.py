@@ -1,6 +1,6 @@
 import eel
 import requests
-import telebot                                     # Project created with love by zafros #
+from telebot import TeleBot                                     # Project created with love by zafros #
 from time import sleep
 from win32api import GetSystemMetrics # in order to get screen size
 
@@ -41,7 +41,7 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 	progress_count = 1
 	if r_id != '' and channel_id != '' and amount != '' and token != '':
 
-		bot = telebot.TeleBot(token, parse_mode='Markdown')
+		bot = TeleBot(token, parse_mode='Markdown')
 
 		try:
 			r_id = r_id.replace('r/', '') # delete r/ if it exiting
