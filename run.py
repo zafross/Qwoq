@@ -97,8 +97,8 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 				pixel = round(742 / (amount/(i-1)))
 				if pixel < 10:
 					pixel = 10                     # progress bar editing
-				progress_count += 1
 				eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
+				progress_count += 1
 
 			except Exception as ex:
 				print(ex)
