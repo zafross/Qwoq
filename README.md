@@ -27,7 +27,7 @@
 3. Done!
 
 ## ❓ How to use it:
-### Important: you need installed chrome
+#### Important: you need installed chrome
 1. Create a telegram bot with [@BotFather](https://t.me/BotFather) and copy bot token.
 2. Add the created bot to your channel as admin. [(help)](https://stackoverflow.com/a/33497769/19632709)
 3. Run `run.py` or `Qwoq.exe` (Depending on which method you choose).
