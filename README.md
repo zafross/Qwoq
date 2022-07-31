@@ -2,7 +2,7 @@
 <p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
   
 <div align=center>
-  <img src="https://img.shields.io/github/downloads/zafross/qwoq/total" alt=""></img>
+  <img src="https://img.shields.io/badge/Based%20on-eel-blueviolet" alt=""></img>
   <img src="https://img.shields.io/github/license/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt="version"></img>
