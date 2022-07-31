@@ -1,7 +1,6 @@
 import eel
 import requests
 import telebot                                     # Project created with love by zafros #
-from telebot import types
 from time import sleep
 from win32api import GetSystemMetrics # in order to get screen size
 
@@ -46,8 +45,8 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 
 		try:
 			r_id = r_id.replace('r/', '') # delete r/ if it exiting
-		except:
-			pass 
+		except Exception as ex:
+			pass
 
 		with open('config.ini', 'w') as f:
 			if need_section:

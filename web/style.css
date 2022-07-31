@@ -136,44 +136,19 @@ body {
 	color: #FFFFFF;
 }
 
-#token::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-#reddit::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-
-#channel_id::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-
-#cooldown::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
+#token::selection,
+#reddit::selection,
+#channel_id::selection,
+#cooldown::selection,
+#amount::selection,
+#Title::selection,
+#Subtitle::selection,
+.info::selection
+{
+	background:#911BE3E9;
+	color:#fff;
 }
 
-#amount::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-
-#Title::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-
-#Subtitle::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
-
-.info::selection {
- color: #fff; /* Цвет текста */
- background: #911BE3E9; /* Цвет фона */
-}
 
 #Subtitle {
 	position: absolute;
@@ -421,31 +396,21 @@ body {
 	user-select: none;
 }
 
-#cooldown_minus_png:hover {
-	cursor: pointer;
-}
-#cooldown_plus_png:hover {
-	cursor: pointer;
-}
-#cooldown_minus:hover {
-	cursor: pointer;
-}
-#cooldown_plus:hover {
-	cursor: pointer;
+#cooldown_minus_png:hover,
+#cooldown_plus_png:hover,
+#cooldown_minus:hover,
+#cooldown_plus:hover,
+#amount_minus_png:hover,
+#amount_plus_png:hover,
+#amount_minus:hover,
+#amount_plus:hover,
+#image:hover,
+#copyright:hover,
+#logo:hover
+{
+	cursor:pointer;
 }
 
-#amount_minus_png:hover {
-	cursor: pointer;
-}                                                  /*Project created with love by zafros*/
-#amount_plus_png:hover {
-	cursor: pointer;
-}
-#amount_minus:hover {
-	cursor: pointer;
-}
-#amount_plus:hover {
-	cursor: pointer;
-}
 
 #token {
 	padding-left: 10px;
@@ -625,20 +590,15 @@ body {
 	border-radius: 7px;
 }
 
+#background_card_star:hover,
 #background_card_me:hover {
 	cursor: pointer;
 	background: rgba(136, 136, 136, 0.1);
 }
-#background_card_star:hover {
-	cursor: pointer;
-	background: rgba(136, 136, 136, 0.1);
-}
+
 #back:hover {
 	cursor: pointer;
 	background: rgba(255, 0, 0, 0.61);
-}
-#logo:hover {
-	cursor: pointer;
 }
 
 #background_card_star {
