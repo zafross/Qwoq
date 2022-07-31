@@ -5,12 +5,12 @@
   <img src="https://img.shields.io/github/downloads/zafross/qwoq/total" alt=""></img>
   <img src="https://img.shields.io/github/license/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
-  <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt=""></img>
+  <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt="version"></img>
   <img src="https://img.shields.io/tokei/lines/github/zafross/Qwoq" alt="">
 </div>
 
 <div align=center>
-  <img src="https://i.imgur.com/3ppnvhD.gif" alt=""></img>
+  <img src="https://i.imgur.com/NGyslv9.gif" alt=""></img>
 </div>
 
 ## ⚙️ FIRST SETUP:
