@@ -7,6 +7,7 @@
   <img src="https://img.shields.io/github/commit-activity/m/zafross/qwoq" alt=""></img>
   <img src="https://img.shields.io/github/v/release/zafross/qwoq?display_name=tag&include_prereleases" alt="version"></img>
   <img src="https://img.shields.io/tokei/lines/github/zafross/Qwoq" alt="">
+  <a href="https://lgtm.com/projects/g/zafross/Qwoq/context:javascript"><img alt="Language grade: JavaScript" src="https://img.shields.io/lgtm/grade/javascript/g/zafross/Qwoq.svg?logo=lgtm&logoWidth=18"/></a>
 </div>
 
 <div align=center>
