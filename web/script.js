@@ -1,5 +1,6 @@
 var btn_image = 1
 var btn_copyright = 1                /*Project created with love by zafros*/
+var cancel_status = 0
 
 document.querySelector("#submit").addEventListener("click", sendData);
 document.querySelector("#back").addEventListener("click", Cancel);
@@ -83,17 +84,11 @@ function Done(amount) {
 	document.querySelector("#counter").textContent = amount + '/' + amount;
 }
 
-async function Cancel() {
+function Cancel() {
 	// Hide page 2 and shows page 1 (where the start button is)
 	document.querySelector(".Second_screen").style.display='none';
 	document.querySelector(".First_screen").style.display='block';
-
-	document.querySelector("#loading").style.background = 'rgba(132, 36, 255, 0.51)';
-	document.querySelector("#loading").style.boxShadow = '0px 0px 20px rgba(158, 0, 255, 0.1)';
-	document.querySelector("#title_process").textContent = 'Process started';
-	document.querySelector("#done_title").style.opacity = '0';
-	document.querySelector("#loading").style.width = '10px';
-	await eel.cancel();
+	cancel_status = 1;
 }
 
 /*Project created with love by zafros*/
@@ -112,6 +107,22 @@ async function sendData() {
 
 	// r_id, channel_id, amount, token, image, copyright, cooldown=1000
 	await eel.get_data(r_id, channel_id, amount, token, btn_image, btn_copyright, cooldown);
+}
+
+eel.expose(give_cancel_status)
+function give_cancel_status() {
+	if (cancel_status == 1) {
+		document.querySelector("#loading").style.background = 'rgba(132, 36, 255, 0.51)';
+		document.querySelector("#loading").style.boxShadow = '0px 0px 20px rgba(158, 0, 255, 0.1)';
+		document.querySelector("#title_process").textContent = 'Process started';
+		document.querySelector("#done_title").style.opacity = '0';
+		document.querySelector("#loading").style.width = '10px';
+		cancel_status = 0
+		return 1;
+	}
+	else {
+		return 0;
+	}
 }
 
 eel.expose(set_progres)

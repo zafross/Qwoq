@@ -8,8 +8,6 @@ from configparser import ConfigParser  # CONFIG
 config = ConfigParser()
 config.read('config.ini')
 
-cancel_status = 0
-
 try: # Checking for the existence of a file
 	with open('config.ini', 'r') as f:
 		pass
@@ -30,12 +28,6 @@ def on_load_js(): # Start after javascript is loaded
 		eel.set_params(r_id, channel_id, token, amount, cooldown, image, copyright)   # <- Inserts the last entered data
 	except Exception as ex: # if this first start
 		print('creating config')
-
-@eel.expose
-def cancel():  #   <- TO DO
-	global cancel_status
-	cancel_status = 1
-	print('canceled')
 
 @eel.expose
 def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
@@ -76,7 +68,8 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 
 		for i in range(2, amount+2): # amount +2 because first 2 posts is not what we need. 
 									 # Example: if you choose the number of 3 posts, then 5 posts will be given out.
-			if cancel_status == 0:
+			
+			if eel.give_cancel_status()() == 0:
 				txt = answer['data']['children'][i]['data']['title'] # get text
 				print(txt)
 				try:
@@ -111,10 +104,11 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 				print('\n')
 			else:
 				cancel_status = 0
-				break
+				print('CANCELED')
+				return
 		eel.Done(str(amount))
 	else:
-		print('НЕ ВСЕ ПОЛЯ ЗАПОЛНЕНЫ')
+		print('FILL IN ALL THE FIELDS!')
 
                                                           # Project created with love by zafros #
 
@@ -124,4 +118,4 @@ h, w = img.size
 h = round(h/2-812/2)  # middle of the screen
 w = round(w/2-600/2)  # middle of the screen
 eel.init('web') # init folder
-eel.start('index.html', size=(813+15, 548+40), position=(h, w)) # start chrome #+15 +40
+eel.start('index.html', size=(813+15, 548+40), position=(h, w), shutdown_delay=0) # start chrome #+15 +40
