@@ -53,8 +53,8 @@ _😋 I will be glad for your help_
   - [X] Bot token in web
   - [X] Change the delay between messages in web
   - [X] The number on the progress bar (Example: 53/250)
-- [ ] Parse a video too
-- [ ] Message if not all fields are filled
+- [ ] Parse a video too (now parse without audio)
+- [X] Message if not all fields are filled
 - [ ] Do not send similar messages 
 - [X] A working cancel button
 - [ ] Info buttons
