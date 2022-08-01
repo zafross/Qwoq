@@ -120,8 +120,8 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 
 ##########################################
 img = ImageGrab.grab()
-w, h = img.size
-h = round(w/2-813/2)  # middle of the screen
-w = round(h/2-548/2)  # middle of the screen
+h, w = img.size
+h = round(h/2-812/2)  # middle of the screen
+w = round(w/2-600/2)  # middle of the screen
 eel.init('web') # init folder
 eel.start('index.html', size=(813+15, 548+40), position=(h, w)) # start chrome #+15 +40
