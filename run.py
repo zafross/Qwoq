@@ -70,32 +70,30 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 			txt = answer['data']['children'][i]['data']['title'] # get text
 			print(txt)
 			try:
-				link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
+				if answer['data']['children'][i]['data']['is_video']:
+					link = answer['data']['children'][i]['data']['media']['reddit_video']['fallback_url']
+					is_video = True
+				else:
+					link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
+					is_video = False
 				print(link)    # get image
-				img=True
+				valid=True
 				if link == 'preview': # if perm link != link on photo
-					img=False
+					valid=False
 			except Exception as ex: #if no img
 				print(ex)
-				img=False
+				valid=False
 
 			if copyright == 1:
 				copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
 				txt = txt + f'[\n © Reddit]({copyright_text})'
 			try:
-				if img:
+				if valid:
 					try:
-						bot.send_photo(channel_id, photo=link, caption=txt)
-					except Exception as ex:
-						if 'Too Many Requests' in str(ex):
-							eel.notify('Too many requests', 'Telegram says you are sending messages too fast. Please increase the delay.')
-							sleep(6)
+						if is_video:
+							bot.send_video(channel_id, video=link, caption=txt)
 						else:
-							print(ex)
-							sleep(2)
-				elif image == 0:
-					try:
-						bot.send_message(channel_id, txt, disable_web_page_preview = True)
+							bot.send_photo(channel_id, photo=link, caption=txt)
 					except Exception as ex:
 						if 'Too Many Requests' in str(ex):
 							eel.notify('Too many requests', 'Telegram says you are sending messages too fast. Please increase the delay.')
