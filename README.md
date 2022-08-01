@@ -14,7 +14,7 @@
   <img src="https://i.imgur.com/NGyslv9.gif" alt=""></img>
 </div>
 
-## ⚙️ FIRST SETUP:
+## ⚙️ INSTALL:
 
 #### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
 1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
