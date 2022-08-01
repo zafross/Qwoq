@@ -61,3 +61,4 @@ _😋 I will be glad for your help_
 - [X] Save settings (config.ini)
 - [X] Send completed message and turn buttons when progress is done.
 - [X] Translate into English
+- [ ] Other languages
