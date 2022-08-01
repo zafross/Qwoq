@@ -14,9 +14,7 @@
   <img src="https://i.imgur.com/NGyslv9.gif" alt=""></img>
 </div>
 
-### 🙏 Please help with Cancel button. I can't make it work (it doesn't stop sending messages)
-
-## ⚙️ FIRST SETUP:
+## ⚙️ INSTALL:
 
 #### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
 1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
@@ -54,11 +52,12 @@ _😋 I will be glad for your help_
   - [X] Toggle copyright in web
   - [X] Bot token in web
   - [X] Change the delay between messages in web
-- [ ] The number on the progress bar (Example: 53/250)
+  - [X] The number on the progress bar (Example: 53/250)
 - [ ] Parse a video too
+- [ ] Message if not all fields are filled
 - [ ] Do not send similar messages 
-- [ ] A working cancel button (Not functioning now)
-- [ ] Info buttons (Not functioning now)
+- [X] A working cancel button
+- [ ] Info buttons
 - [X] Save settings (config.ini)
 - [X] Send completed message and turn buttons when progress is done.
 - [X] Translate into English
