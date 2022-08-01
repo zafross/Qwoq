@@ -1,2 +1,6 @@
 config.ini
 __pycache__
+build
+dist
+run.spec
+build exe.bat
