@@ -1,5 +1,5 @@
 <h1 align=center>👽 Qwoq - Auto reddit to telegram parser.</h1>
-<p align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</p>
+<h4 align=center>Receives posts from the selected section on reddit and sends them to the telegram channel of your choice.</h4>
   
 <div align=center>
   <img src="https://img.shields.io/badge/Based%20on-eel-blueviolet" alt=""></img>
@@ -13,6 +13,8 @@
 <div align=center>
   <img src="https://i.imgur.com/NGyslv9.gif" alt=""></img>
 </div>
+
+### 🙏 Please help with Cancel button. I can't make it work (it doesn't stop sending messages)
 
 ## ⚙️ FIRST SETUP:
 
