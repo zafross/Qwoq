@@ -2,8 +2,6 @@ body {
 	background: #121212;           /*Project created with love by zafros*/
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
-
 #reddit {
 	padding-left: 10px;
 	box-sizing: border-box;
@@ -18,7 +16,7 @@ body {
 	border: 1px solid rgba(255, 255, 255, 0.2);
 	border-radius: 7px;
 
-	font-family: 'Rubik';
+	font-family: 'Rubik', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 18px;

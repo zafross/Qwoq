@@ -32,16 +32,16 @@ document.querySelector("#amount_minus").addEventListener("click", function() {
 });
 
 document.querySelector("#cooldown_plus_png").addEventListener("click", function() {
-	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 1
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 100
 });
 document.querySelector("#cooldown_minus_png").addEventListener("click", function() {
-	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 1
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 100
 });
 document.querySelector("#cooldown_plus").addEventListener("click", function() {
-	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 1
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) + 100
 });
 document.querySelector("#cooldown_minus").addEventListener("click", function() {
-	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 1
+	document.querySelector("#cooldown").value = parseInt(document.querySelector("#cooldown").value) - 100
 });
 
 

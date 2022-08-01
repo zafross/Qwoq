@@ -2,20 +2,20 @@ import eel
 import requests
 from telebot import TeleBot                                     # Project created with love by zafros #
 from time import sleep
-from win32api import GetSystemMetrics # in order to get screen size
+from PIL import ImageGrab
 
 from configparser import ConfigParser  # CONFIG
 config = ConfigParser()
 config.read('config.ini')
 
+cancel_status = 0
+
 try: # Checking for the existence of a file
 	with open('config.ini', 'r') as f:
 		pass
-	need_section=False
 except FileNotFoundError:
 	with open('config.ini', 'w') as f:
 		pass
-	need_section=True
 
 @eel.expose
 def on_load_js(): # Start after javascript is loaded
@@ -29,14 +29,17 @@ def on_load_js(): # Start after javascript is loaded
 		copyright = config.get('web', 'copyright')
 		eel.set_params(r_id, channel_id, token, amount, cooldown, image, copyright)   # <- Inserts the last entered data
 	except Exception as ex: # if this first start
-		print(ex)
+		print('creating config')
 
 @eel.expose
 def cancel():  #   <- TO DO
+	global cancel_status
+	cancel_status = 1
 	print('canceled')
 
 @eel.expose
 def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
+	global cancel_status
 	print(r_id + ' - ' + channel_id + ' - ' + amount + ' - ' + token + ' - ' + str(image) + ' - ' + str(copyright) + ' - ' + str(cooldown))
 	progress_count = 1
 	if r_id != '' and channel_id != '' and amount != '' and token != '':
@@ -49,8 +52,10 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 			pass
 
 		with open('config.ini', 'w') as f:
-			if need_section:
+			try:
 				config.add_section('web')
+			except Exception as ex:
+				print('not need section')
 			config.set('web', 'reddit', r_id)
 			config.set('web', 'channel', channel_id)
 			config.set('web', 'token', token)
@@ -71,38 +76,42 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 
 		for i in range(2, amount+2): # amount +2 because first 2 posts is not what we need. 
 									 # Example: if you choose the number of 3 posts, then 5 posts will be given out.
-			txt = answer['data']['children'][i]['data']['title'] # get text
-			print(txt)
-			try:
-				link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
-				print(link)    # get image
-				img=True
-				if link == 'preview': # if perm link != link on photo
+			if cancel_status == 0:
+				txt = answer['data']['children'][i]['data']['title'] # get text
+				print(txt)
+				try:
+					link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
+					print(link)    # get image
+					img=True
+					if link == 'preview': # if perm link != link on photo
+						img=False
+				except Exception as ex: #if no img
+					print(ex)
 					img=False
-			except Exception as ex: #if no img
-				print(ex)
-				img=False
 
-			if copyright == 1:
-				copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
-				txt = txt + f'[\n © Reddit]({copyright_text})'
-			try:
-				if img:
-					bot.send_photo(channel_id, photo=link, caption=txt)
-				elif image == 0:
-					bot.send_message(channel_id, txt, disable_web_page_preview = True)
-				sleep(int(cooldown)/1000) # to no spam report from telegram
+				if copyright == 1:
+					copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
+					txt = txt + f'[\n © Reddit]({copyright_text})'
+				try:
+					if img:
+						bot.send_photo(channel_id, photo=link, caption=txt)
+					elif image == 0:
+						bot.send_message(channel_id, txt, disable_web_page_preview = True)
+					sleep(int(cooldown)/1000) # to no spam report from telegram
 
-				pixel = round(742 / (amount/(i-1)))
-				if pixel < 10:
-					pixel = 10                     # progress bar editing
-				eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
-				progress_count += 1
+					pixel = round(742 / (amount/(i-1)))
+					if pixel < 10:
+						pixel = 10                     # progress bar editing
+					eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
+					progress_count += 1
 
-			except Exception as ex:
-				print(ex)
-				sleep(5)
-			print('\n')
+				except Exception as ex:
+					print(ex)
+					sleep(5)
+				print('\n')
+			else:
+				cancel_status = 0
+				break
 		eel.Done(str(amount))
 	else:
 		print('НЕ ВСЕ ПОЛЯ ЗАПОЛНЕНЫ')
@@ -110,7 +119,9 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
                                                           # Project created with love by zafros #
 
 ##########################################
-h = round(GetSystemMetrics(0)/2-813/2)  # middle of the screen
-w = round(GetSystemMetrics(1)/2-548/2)  # middle of the screen
+img = ImageGrab.grab()
+w, h = img.size
+h = round(w/2-813/2)  # middle of the screen
+w = round(h/2-548/2)  # middle of the screen
 eel.init('web') # init folder
 eel.start('index.html', size=(813+15, 548+40), position=(h, w)) # start chrome #+15 +40
