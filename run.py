@@ -34,81 +34,91 @@ def get_data(r_id, channel_id, amount, token, image, copyright, cooldown=1000):
 	global cancel_status
 	print(r_id + ' - ' + channel_id + ' - ' + amount + ' - ' + token + ' - ' + str(image) + ' - ' + str(copyright) + ' - ' + str(cooldown))
 	progress_count = 1
-	if r_id != '' and channel_id != '' and amount != '' and token != '':
+	bot = TeleBot(token, parse_mode='Markdown')
+	try:
+		r_id = r_id.replace('r/', '') # delete r/ if it exiting
+	except Exception as ex:
+		pass
 
-		bot = TeleBot(token, parse_mode='Markdown')
-
+	with open('config.ini', 'w') as f:
 		try:
-			r_id = r_id.replace('r/', '') # delete r/ if it exiting
+			config.add_section('web')
 		except Exception as ex:
-			pass
+			print('not need section')
+		config.set('web', 'reddit', r_id)
+		config.set('web', 'channel', channel_id)
+		config.set('web', 'token', token)
+		config.set('web', 'amount', amount)       # Project created with love by zafros #
+		config.set('web', 'cooldown', cooldown)
+		config.set('web', 'image', str(image))
+		config.set('web', 'copyright', str(copyright))
+		config.write(f)
+	amount = int(amount) # fix one bug
 
-		with open('config.ini', 'w') as f:
-			try:
-				config.add_section('web')
-			except Exception as ex:
-				print('not need section')
-			config.set('web', 'reddit', r_id)
-			config.set('web', 'channel', channel_id)
-			config.set('web', 'token', token)
-			config.set('web', 'amount', amount)       # Project created with love by zafros #
-			config.set('web', 'cooldown', cooldown)
-			config.set('web', 'image', str(image))
-			config.set('web', 'copyright', str(copyright))
-			config.write(f)
-		amount = int(amount) # fix one bug
+	url = f'https://www.reddit.com/r/{r_id}/hot/.json?limit={amount}' # get link to json of page
+	HEADERS = {
+		'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0'
+	}
 
-		url = f'https://www.reddit.com/r/{r_id}/hot/.json?limit={amount}' # get link to json of page
-		HEADERS = {
-			'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:96.0) Gecko/20100101 Firefox/96.0'
-		}
+	response = requests.get(url, headers = HEADERS)
+	answer = response.json()
 
-		response = requests.get(url, headers = HEADERS)
-		answer = response.json()
-
-		for i in range(2, amount+2): # amount +2 because first 2 posts is not what we need. 
-									 # Example: if you choose the number of 3 posts, then 5 posts will be given out.
+	for i in range(2, amount+2): # amount +2 because first 2 posts is not what we need. 
+								 # Example: if you choose the number of 3 posts, then 5 posts will be given out.
 			
-			if eel.give_cancel_status()() == 0:
-				txt = answer['data']['children'][i]['data']['title'] # get text
-				print(txt)
-				try:
-					link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
-					print(link)    # get image
-					img=True
-					if link == 'preview': # if perm link != link on photo
-						img=False
-				except Exception as ex: #if no img
-					print(ex)
+		if eel.give_cancel_status()() == 0:
+			txt = answer['data']['children'][i]['data']['title'] # get text
+			print(txt)
+			try:
+				link = answer['data']['children'][i]['data']['preview']['images'][0]['source']['url'].replace('amp;', '')
+				print(link)    # get image
+				img=True
+				if link == 'preview': # if perm link != link on photo
 					img=False
+			except Exception as ex: #if no img
+				print(ex)
+				img=False
 
-				if copyright == 1:
-					copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
-					txt = txt + f'[\n © Reddit]({copyright_text})'
-				try:
-					if img:
+			if copyright == 1:
+				copyright_text = 'https://www.reddit.com' + answer['data']['children'][i]['data']['permalink'] # copyright link
+				txt = txt + f'[\n © Reddit]({copyright_text})'
+			try:
+				if img:
+					try:
 						bot.send_photo(channel_id, photo=link, caption=txt)
-					elif image == 0:
+					except Exception as ex:
+						if 'Too Many Requests' in str(ex):
+							eel.notify('Too many requests', 'Telegram says you are sending messages too fast. Please increase the delay.')
+							sleep(6)
+						else:
+							print(ex)
+							sleep(2)
+				elif image == 0:
+					try:
 						bot.send_message(channel_id, txt, disable_web_page_preview = True)
-					sleep(int(cooldown)/1000) # to no spam report from telegram
+					except Exception as ex:
+						if 'Too Many Requests' in str(ex):
+							eel.notify('Too many requests', 'Telegram says you are sending messages too fast. Please increase the delay.')
+							sleep(6)
+						else:
+							print(ex)
+							sleep(2)
+				sleep(int(cooldown)/1000) # to no spam report from telegram
 
-					pixel = round(742 / (amount/(i-1)))
-					if pixel < 10:
-						pixel = 10                     # progress bar editing
-					eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
-					progress_count += 1
+				pixel = round(742 / (amount/(i-1)))
+				if pixel < 10:
+					pixel = 10                     # progress bar editing
+				eel.set_progres(str(pixel)+'px', str(progress_count)+'/'+str(amount))
+				progress_count += 1
 
-				except Exception as ex:
-					print(ex)
-					sleep(5)
-				print('\n')
-			else:
-				cancel_status = 0
-				print('CANCELED')
-				return
-		eel.Done(str(amount))
-	else:
-		print('FILL IN ALL THE FIELDS!')
+			except Exception as ex:
+				print(ex)
+			print('\n')
+		else:
+			cancel_status = 0
+			print('CANCELED')
+			return
+	eel.Done(str(amount))
 
                                                           # Project created with love by zafros #
 

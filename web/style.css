@@ -101,7 +101,6 @@ body {
 	align-items: center;
 	text-align: center;
 	justify-content: center;
-
 	color: #FFFFFF;
 }
 
@@ -404,6 +403,7 @@ body {
 #amount_plus:hover,
 #image:hover,
 #copyright:hover,
+#notify_ok:hover,
 #logo:hover
 {
 	cursor:pointer;
@@ -559,6 +559,7 @@ body {
 #loading {
 	transition: 0.2s ease-in-out;
 	box-sizing: border-box;
+	opacity: 0;
 
 	position: absolute;
 	width: 10px;
@@ -615,6 +616,7 @@ body {
 }
 
 #my_avatar {
+	user-select: none;
 	position: absolute;
 	width: 100px;
 	height: 100px;
@@ -625,6 +627,7 @@ body {
 }
 
 #me_title {
+	user-select: none;
 	position: absolute;
 	width: 215px;
 	height: 40px;
@@ -643,6 +646,7 @@ body {
 }
 
 #me_subtitle {
+	user-select: none;
 	position: absolute;
 	width: 222px;
 	height: 53px;
@@ -661,6 +665,7 @@ body {
 }
 
 #star_img {
+	user-select: none;
 	position: absolute;
 	left: 17px;
 	top: 18px;
@@ -668,6 +673,7 @@ body {
 }
 
 #star_title {
+	user-select: none;
 	position: absolute;
 	width: 230px;
 	height: 40px;
@@ -686,6 +692,7 @@ body {
 }
 
 #star_subtitle {
+	user-select: none;
 	position: absolute;
 	width: 222px;
 	height: 53px;
@@ -704,6 +711,7 @@ body {
 }
 
 #back {
+	user-select: none;
 	box-sizing: border-box;
 
 	position: absolute;
@@ -755,4 +763,119 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+#notify_background_box {
+	opacity: 0;
+	transition: 0.06s ease-out;
+	user-select: none;
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 411px;
+	height: 222px;
+	left: 168px;
+	top: 177px;
+
+	background: #121212;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+}
+
+#notify_title {
+	position: absolute;
+	width: 322px;
+	height: 32px;
+	left: 70px;
+	top: 19px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 100%;
+	/* or 22px */
+
+	display: flex;
+	align-items: center;
+
+	color: #FFFFFF;
+}
+
+#blur {
+	transition: 0.15s ease-out;;
+	opacity: 0;
+	position: absolute;
+	width: 810px;
+	height: 545px;
+	left: 0px;
+	top: 0px;
+
+	background: rgba(217, 217, 217, 0.01);
+	backdrop-filter: blur(4px);
+	/* Note: backdrop-filter has minimal browser support */
+
+	border-radius: 7px;
+	user-select: none;
+}
+
+#notify_img {
+	position: absolute;
+	left: 19px;
+	top: 19px;
+	user-select: none;
+}
+
+#notify_subtitle {
+	position: absolute;
+	width: 372px;
+	height: 82px;
+	left: 20px;
+	top: 66px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 118.5%;
+	/* or 24px */
+
+	letter-spacing: 0.02em;
+
+	color: #FFFFFF;
+
+	opacity: 0.7;
+}
+
+#notify_ok {
+	box-sizing: border-box;
+
+	position: absolute;
+	width: 373px;
+	height: 43px;
+	left: 19px;
+	top: 161px;
+
+	background: rgba(90, 146, 255, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	border-radius: 7px;
+
+	font-family: 'Rubik';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 22px;
+	line-height: 100%;
+	/* or 22px */
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	color: #FFFFFF;
+	justify-content: center;
+	user-select: none;
 }

@@ -23,26 +23,26 @@
 		<p id="channel_id_help" class="info">Telegram channel ID:</p>
 		<p id="reddit_help" class="info">Subreddit name:</p>
 		<p id="token_help" class="info">Bot token:</p>
-		<p id="image_help" class="info">Only with image:</p>
+		<p id="image_help" class="info">Only with media:</p>
 		<p id="copyright_help" class="info">Send copyright:</p>
 		<p id="cooldown_help" class="info">Cooldown (milliseconds):</p>
 		<p id="amount_help" class="info">Post amount:</p>
 
 		<!-- Project created with love by zafros -->
-		<input type="text" id='reddit' placeholder="Minecraft">
-		<input type="text" id='channel_id' placeholder="@reddit_telegram">
-		<input type="password" id='token' placeholder="KJSADAB:12312721:ASL">
+		<input type="text" id='reddit' placeholder="Minecraft" required>
+		<input type="text" id='channel_id' placeholder="@reddit_telegram" required>
+		<input type="password" id='token' placeholder="KJSADAB:12312721:ASL" required>
 
 		<button id="image">Yes</button>
 		<button id="copyright">Yes</button>
 
-		<input type="number" id='amount' placeholder="0" min="0">
+		<input type="number" id='amount' placeholder="0" required min="0">
 		<button id="amount_plus"></button>
 		<button id="amount_minus"></button>
 		<img id="amount_plus_png" src="/plus.png" alt="https://waa.ai/fI87">
 		<img id="amount_minus_png" src="/minus.png" alt="https://waa.ai/fI87"> <!-- If files broken -->
 
-		<input type="number" id='cooldown' placeholder="1000" min="0">
+		<input type="number" id='cooldown' placeholder="1000" required min="0">
 		<button id="cooldown_plus"></button>
 		<button id="cooldown_minus"></button>
 		<img id="cooldown_plus_png" src="/plus.png" alt="https://waa.ai/fI87">
@@ -71,6 +71,19 @@
 		</div>
 		<button id="back">Back</button>
 	</div>
+
+	<div id="blur"></div>
+	<div id="notify_background_box" class="notify">
+		<img src="/notify.png" alt="" id="notify_img">
+		<span id="notify_title"></span>
+		<span id="notify_subtitle"></span>
+		<button id="notify_ok">OK</button>
+	</div>
+	<script>
+		document.querySelector("#blur").style.display='none';
+		document.querySelector(".notify").style.display='none';
+	</script>
+
                                                <!-- Project created with love by zafros -->
 	<script type="text/javascript" src="/script.js"></script>
 </body>

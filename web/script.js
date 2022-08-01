@@ -5,6 +5,15 @@ var cancel_status = 0
 document.querySelector("#submit").addEventListener("click", sendData);
 document.querySelector("#back").addEventListener("click", Cancel);
 
+document.querySelector("#notify_ok").addEventListener("click", function() {
+	document.querySelector(".notify").style.opacity ='0';
+	document.querySelector("#blur").style.opacity ='0';
+	setTimeout(function(){
+		document.querySelector("#blur").style.display='none';
+		document.querySelector(".notify").style.display='none';
+	}, 150)
+	
+});
 
 document.querySelector("#background_card_me").addEventListener("click", function() {
 	window.open("https://github.com/zafross");
@@ -82,12 +91,20 @@ function Done(amount) {
 	document.querySelector("#title_process").textContent = 'Process completed successfully!';
 	document.querySelector("#done_title").style.opacity = '1';
 	document.querySelector("#counter").textContent = amount + '/' + amount;
+	document.querySelector("#loading").style.width = '742px';
 }
 
+eel.expose(Cancel)
 function Cancel() {
 	// Hide page 2 and shows page 1 (where the start button is)
 	document.querySelector(".Second_screen").style.display='none';
 	document.querySelector(".First_screen").style.display='block';
+	document.querySelector("#loading").style.background = 'rgba(132, 36, 255, 0.51)';
+	document.querySelector("#loading").style.boxShadow = '0px 0px 20px rgba(158, 0, 255, 0.1)';
+	document.querySelector("#title_process").textContent = 'Process started';
+	document.querySelector("#done_title").style.opacity = '0';
+	document.querySelector("#loading").style.width = '10px';
+	document.querySelector("#loading").style.opacity = '0';
 	cancel_status = 1;
 }
 
@@ -99,14 +116,20 @@ async function sendData() {
 	let cooldown = document.querySelector('#cooldown').value;
 	let token = document.querySelector('#token').value;
 
-	document.querySelector(".First_screen").style.display='none';
-	document.querySelector(".Second_screen").style.display='block';
-	document.querySelector("#counter").textContent = '0/'+amount;
-	// Hide page 1 and shows page 2 (where the stop button is)
-	// and send inputed data to python 
+	if(r_id != '' && channel_id != '' && amount != '' && token != '') {
+		document.querySelector(".First_screen").style.display='none';
+		document.querySelector(".Second_screen").style.display='block';
+		document.querySelector("#counter").textContent = '0/'+amount;
+		// Hide page 1 and shows page 2 (where the stop button is)
+		// and send inputed data to python 
 
-	// r_id, channel_id, amount, token, image, copyright, cooldown=1000
-	await eel.get_data(r_id, channel_id, amount, token, btn_image, btn_copyright, cooldown);
+		// r_id, channel_id, amount, token, image, copyright, cooldown=1000
+		await eel.get_data(r_id, channel_id, amount, token, btn_image, btn_copyright, cooldown);	
+	}
+	else {
+		notify('Please fill in all fields.', "If you don't know what to put in a field, click on the version and read the documentation.")
+	}
+
 }
 
 eel.expose(give_cancel_status)
@@ -117,6 +140,7 @@ function give_cancel_status() {
 		document.querySelector("#title_process").textContent = 'Process started';
 		document.querySelector("#done_title").style.opacity = '0';
 		document.querySelector("#loading").style.width = '10px';
+		document.querySelector("#loading").style.opacity = '0';
 		cancel_status = 0
 		return 1;
 	}
@@ -128,6 +152,7 @@ function give_cancel_status() {
 eel.expose(set_progres)
 function set_progres(pixel, txt) {
 	// progress bar
+	document.querySelector("#loading").style.opacity = '1';
 	document.querySelector("#loading").style.width = pixel;
 	document.querySelector("#counter").textContent = txt;
 }
@@ -158,3 +183,16 @@ async function Loaded_js() {
 	await eel.on_load_js();
 }
 Loaded_js()
+
+eel.expose(notify)
+function notify(title, subtitle) {
+	document.querySelector("#blur").style.display='block';
+	document.querySelector(".notify").style.display='block';
+	setTimeout(function(){
+		document.querySelector("#blur").style.opacity ='1';
+		document.querySelector(".notify").style.opacity ='1';
+	}, 150)
+
+	document.querySelector("#notify_title").textContent = title
+	document.querySelector("#notify_subtitle").textContent = subtitle
+}
