@@ -192,4 +192,4 @@ h = round(h/2-812/2)  # middle of the screen
 w = round(w/2-600/2)  # middle of the screen
 log('Starting web interface...')
 eel.init('web') # init folder
-eel.start('index.html', size=(813+15, 548+40), position=(h, w), shutdown_delay=0) # start chrome #+15 +40
+eel.start('index.html', size=(813+15, 548+40), position=(h, w), shutdown_delay=0, port=0) # start chrome #+15 +40
