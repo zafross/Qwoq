@@ -4,3 +4,4 @@ build
 dist
 run.spec
 build exe.bat
+favicon.ico

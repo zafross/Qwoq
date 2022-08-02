@@ -18,6 +18,18 @@ def log(text, level='info'):
 	elif level == 'success':
 		print(Colors.green + "[ SUCCESS ] " + str(text))
 
+def check_update():
+	eel.sleep(1.0)
+	log('Checking new updates...')
+	response = requests.get("https://api.github.com/repos/zafross/Qwoq/releases/latest")
+	ver_new = str(response.json()["name"])
+	ver_now = str(eel.get_version()().replace('version: ', ''))
+	if ver_now != ver_new:
+		log(f'New update available ({ver_now} -> {ver_new})', 'success')
+		eel.notify('New update available', f'Your version is {ver_now}, the new version is {ver_new}. Click on version if you want to update')
+	else:
+		log('You have the latest version.', 'success')
+
 try: # Checking for the existence of a file
 	log('Checking config file...')
 	with open('config.ini', 'r') as f:
@@ -30,6 +42,7 @@ except FileNotFoundError:
 
 @eel.expose
 def on_load_js(): # Start after javascript is loaded
+	eel.spawn(check_update)
 	log('The web interface has been launched successfully.\n', 'success')
 	try:
 		log('Finding settings in the config file....')

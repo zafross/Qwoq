@@ -203,3 +203,8 @@ function notify(title, subtitle) {
 	document.querySelector("#notify_title").textContent = title
 	document.querySelector("#notify_subtitle").textContent = subtitle
 }
+
+eel.expose(get_version)
+function get_version() {
+	return document.querySelector("#version").textContent;
+}
