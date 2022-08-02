@@ -15,19 +15,11 @@
 </div>
 
 ## ⚙️ INSTALL:
-
-#### 1️⃣ Method 1 - WITH INSTALLED PYTHON:
-1. [Download latest release source code (.zip)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
-2. Open cmd in the repository folder on your PC and write: `pip install -r requirements.txt`
-3. Done!
-
-#### 2️⃣ Method 2 - WITHOUT INSTALLED PYTHON:
-1. [Download latest release installer (.exe)](https://github.com/zafross/Qwoq/releases/tag/v0.2-beta)
-2. Run and install `Qwoq 0.2 setup.exe`
+1. [Download latest release (.exe)](https://github.com/zafross/Qwoq/releases/v0.3-stable)
+2. Check if you have installed [Google Chrome](https://www.google.com/intl/ru/chrome/).
 3. Done!
 
 ## ❓ How to use it:
-#### Important: you need installed chrome
 1. Create a telegram bot with [@BotFather](https://t.me/BotFather) and copy bot token.
 2. Add the created bot to your channel as admin. [(help)](https://stackoverflow.com/a/33497769/19632709)
 3. Run `run.py` or `Qwoq.exe` (Depending on which method you choose).
