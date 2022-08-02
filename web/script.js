@@ -97,6 +97,9 @@ function Done(amount) {
 eel.expose(Cancel)
 function Cancel() {
 	// Hide page 2 and shows page 1 (where the start button is)
+	if (document.querySelector("#title_process").textContent != 'Process completed successfully!') {
+		cancel_status = 1;
+	};
 	document.querySelector(".Second_screen").style.display='none';
 	document.querySelector(".First_screen").style.display='block';
 	document.querySelector("#loading").style.background = 'rgba(132, 36, 255, 0.51)';
@@ -105,7 +108,6 @@ function Cancel() {
 	document.querySelector("#done_title").style.opacity = '0';
 	document.querySelector("#loading").style.width = '10px';
 	document.querySelector("#loading").style.opacity = '0';
-	cancel_status = 1;
 }
 
 /*Project created with love by zafros*/
