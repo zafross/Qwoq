@@ -117,19 +117,24 @@ async function sendData() {
 	let token = document.querySelector('#token').value;
 
 	if(r_id != '' && channel_id != '' && amount != '' && token != '') {
-		document.querySelector(".First_screen").style.display='none';
-		document.querySelector(".Second_screen").style.display='block';
-		document.querySelector("#counter").textContent = '0/'+amount;
-		// Hide page 1 and shows page 2 (where the stop button is)
-		// and send inputed data to python 
+		if(amount > 0 && cooldown >= 0) {
+			document.querySelector(".First_screen").style.display='none';
+			document.querySelector(".Second_screen").style.display='block';
+			document.querySelector("#counter").textContent = '0/'+amount;
+			// Hide page 1 and shows page 2 (where the stop button is)
+			// and send inputed data to python 
 
-		// r_id, channel_id, amount, token, image, copyright, cooldown=1000
-		await eel.get_data(r_id, channel_id, amount, token, btn_image, btn_copyright, cooldown);	
+			// r_id, channel_id, amount, token, image, copyright, cooldown=1000
+			await eel.get_data(r_id, channel_id, amount, token, btn_image, btn_copyright, cooldown);	
+		}
+		else {
+			notify('Invalid amount or cooldown', 'Both fields must be greater than or equal to 0. Click on the version to read the documentation.')
+		};
+			
 	}
 	else {
 		notify('Please fill in all fields.', "If you don't know what to put in a field, click on the version and read the documentation.")
 	}
-
 }
 
 eel.expose(give_cancel_status)
