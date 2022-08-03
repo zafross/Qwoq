@@ -22,12 +22,12 @@
 ## ❓ How to use it:
 1. Create a telegram bot with [@BotFather](https://t.me/BotFather) and copy bot token.
 2. Add the created bot to your channel as admin. [(help)](https://stackoverflow.com/a/33497769/19632709)
-3. Run `run.py` or `Qwoq.exe` (Depending on which method you choose).
+3. Run `run.py` or `Qwoq.exe`.
 4. In the first field, enter the telegram id of the channel (Example: `@reddit_minecraft`)
 5. In the second field, enter the name of the community on reddit (For example: `Minecraft`)
 6. Paste the copied token into the token field.
 7. Choose if you only want posts with photos and if you want to send copyright. (So far, if you select only with photo posts, there will be less than the selected number)
-8. In the last 2 fields, specify the delay between sending messages in milliseconds (recommended 1000) and amount of these messages.
+8. In the last 2 fields, specify cooldown between sending messages in milliseconds (recommended 1000) and amount of these messages.
 9. Press `START` button.
 
 
